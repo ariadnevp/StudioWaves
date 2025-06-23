@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Waves</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F3E8FF] text-gray-800 font-[Poppins]">
+<header class="bg-[#9D7CD8] text-white p-6 shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <h1 id="logo" class="text-2xl font-bold cursor-pointer">Studio Waves</h1>
+    <nav class="space-x-4">
+      <button onclick="showSection('servicos')" class="hover:underline">Serviços</button>
+      <button onclick="showSection('agendamentos')" class="hover:underline">Agendamentos</button>
+      <button onclick="showSection('contato')" class="hover:underline">Fale Conosco</button>
+      <button onclick="showSection('cursos')" class="hover:underline">Cursos</button>
+      <button onclick="showSection('login')" class="hover:underline">Área do Profissional</button>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto p-6">
+<section id="inicio" class="text-center py-20 px-6 bg-[url('https://ccplbarueri.com.br//imgs/noticias/Centros-de-Capacitacao-Profissional-e-Lazer-de-Barueri-oferecem-cursos-profissionalizantes-na-area-de-beleza-e-estetica.jpg')] bg-cover bg-center rounded-lg shadow-lg text-white">
+  <div class="bg-black bg-opacity-50 p-10 rounded-lg">
+    <h2 class="text-4xl font-bold mb-4">Bem-vinda ao Studio Waves!</h2>
+    <p class="text-lg mb-6">
+      Descubra nossos serviços, agende horários com facilidade ou fale conosco para tirar dúvidas. Tudo em um só lugar!
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <button onclick="showSection('servicos')" class="bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded text-white transition">Serviços</button>
+      <button onclick="showSection('agendamentos')" class="bg-white hover:bg-purple-100 text-purple-700 px-5 py-2 rounded transition">Agendamentos</button>
+      <button onclick="showSection('contato')" class="bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded text-white transition">Fale Conosco</button>
+      <button onclick="showSection('cursos')" class="bg-white hover:bg-purple-100 text-purple-700 px-5 py-2 rounded transition">Cursos</button>
+      <button onclick="showSection('login')" class="bg-purple-700 hover:bg-purple-800 px-5 py-2 rounded text-white transition">Área do Profissional</button>
+    </div>
+  </div>
+</section>
+
+
+  <section id="servicos" class="hidden">
+    <h2 class="text-2xl font-semibold text-purple-700 mb-4">Serviços:</h2>
+    <ul class="list-disc list-inside space-y-1 mb-6">
+      <li>Penteados (social ou para noivas) – solicitar orçamento</li>
+      <li>Maquiagem (social ou para noivas) – solicitar orçamento</li>
+      <li>Manicure – R$30</li>
+      <li>Pedicure – R$30</li>
+      <li>Combo manicure e pedicure – R$55</li>
+      <li>Coloração – solicitar orçamento</li>
+      <li>Progressiva – solicitar orçamento</li>
+      <li>Botox – solicitar orçamento</li>
+      <li>Extensão de cílios – R$120</li>
+      <li>Lash lifting – R$140</li>
+      <li>Unhas de gel – R$135 / Fibra – R$120</li>
+      <li>Design de sobrancelhas – Henna R$50, Personalizado R$35, Brow Lamination R$55</li>
+    </ul>
+    <div class="bg-purple-100 p-4 rounded shadow-sm">
+      <h3 class="text-xl font-semibold text-purple-700 mb-2">Solicite seu orçamento</h3>
+      <p class="mb-4 text-gray-700">Entre em contato conosco via WhatsApp para valores personalizados de serviços como penteado, maquiagem, coloração, progressiva e botox.</p>
+      <a href="https://wa.me/5511945293742" target="_blank" class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">
+        Solicitar Orçamento no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <section id="agendamentos" class="hidden">
+    <h2 class="text-2xl font-semibold text-purple-700 mb-4">Agende seu horário</h2>
+    <form id="formAgendamento" class="space-y-4">
+      <input required name="cliente" placeholder="Nome do Cliente" class="w-full p-2 border rounded" />
+      <input required name="cpf" placeholder="CPF" class="w-full p-2 border rounded" />
+      <input required name="telefone" placeholder="Telefone" class="w-full p-2 border rounded" />
+      <input required type="date" name="data" class="w-full p-2 border rounded" />
+      <input required type="time" name="hora" class="w-full p-2 border rounded" />
+      <select required name="servico" class="w-full p-2 border rounded">
+        <option value="">Selecione um serviço</option>
+        <option>Penteado</option><option>Maquiagem</option><option>Manicure</option>
+        <option>Pedicure</option><option>Coloração</option><option>Progressiva</option>
+        <option>Botox</option><option>Extensão de cílios</option><option>Lash lifting</option>
+        <option>Unhas de gel</option><option>Fibra</option><option>Design de sobrancelhas</option>
+      </select>
+      <select required name="profissional" class="w-full p-2 border rounded">
+        <option value="">Selecione o profissional</option>
+        <option value="merliahpompeo">Merliah Pompeo</option>
+        <option value="atilamontes">Átila Montes</option>
+        <option value="camillarezende">Camilla Rezende</option>
+        <option value="kellysouza">Kelly Souza</option>
+        <option value="ulissesdamata">Ulisses da Mata</option>
+      </select>
+      <select required name="pagamento" class="w-full p-2 border rounded">
+        <option value="">Forma de pagamento</option>
+        <option>Dinheiro</option><option>Pix</option><option>Cartão</option>
+      </select>
+      <select required name="local" class="w-full p-2 border rounded" onchange="toggleEndereco(this)">
+        <option value="">Local do atendimento</option>
+        <option value="studio">Estúdio</option>
+        <option value="domicilio">Domicílio</option>
+      </select>
+      <input name="endereco" id="enderecoInput" placeholder="Endereço (caso seja a domicílio)" class="w-full p-2 border rounded hidden"/>
+      <button class="bg-purple-700 text-white px-4 py-2 rounded">Agendar</button>
+    </form>
+  </section>
+
+  <section id="contato" class="hidden">
+    <h2 class="text-2xl font-semibold text-purple-700 mb-4">Fale Conosco</h2>
+    <p class="text-gray-700 mb-4">Envie dúvidas, elogios ou sugestões. Teremos prazer em responder!</p>
+    <form class="space-y-4">
+      <input type="text" name="nome" placeholder="Seu nome" class="w-full p-2 border rounded" required />
+      <input type="tel" name="telefone" placeholder="Seu telefone (com DDD)" class="w-full p-2 border rounded" required />
+      <input type="email" name="email" placeholder="Seu e-mail" class="w-full p-2 border rounded" required />
+      <textarea name="mensagem" rows="4" placeholder="Escreva sua mensagem" class="w-full p-2 border rounded" required></textarea>
+      <button type="submit" class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">Enviar</button>
+    </form>
+  </section>
+
+  <section id="cursos" class="hidden">
+    <h2 class="text-2xl font-semibold text-purple-700 mb-2">Cursos de Beleza</h2>
+    <ul class="list-disc list-inside">
+      <li>Manicure</li>
+      <li>Pedicure</li>
+      <li>Penteados</li>
+      <li>Maquiagem</li>
+    </ul>
+  </section>
+
+  <section id="login" class="hidden">
+    <h2 class="text-2xl font-semibold text-purple-700">Área do Profissional</h2>
+    <form id="loginForm" class="space-y-2">
+      <input name="usuario" placeholder="Usuário (nome+sobrenome)" class="w-full p-2 border rounded" required />
+      <input name="senha" type="password" placeholder="Senha" class="w-full p-2 border rounded" required />
+      <button class="bg-[#9D7CD8] text-white px-4 py-2 rounded hover:bg-[#7E57C2] transition">Entrar</button>
+    </form>
+
+    <button id="btnSair" class="mt-4 bg-red-600 text-white px-4 py-2 rounded hidden">Sair</button>
+
+    <div class="mt-4 hidden" id="painelProfissional">
+      <h3 class="text-xl text-purple-700">Meus Agendamentos</h3>
+      <nav class="mb-4 space-x-2">
+        <button onclick="mostrarSubsecao('agendamentosProfissional')" class="bg-purple-700 text-white px-3 py-1 rounded">Agendamentos</button>
+        <button onclick="mostrarSubsecao('historicoProfissional')" class="bg-purple-700 text-white px-3 py-1 rounded">Histórico</button>
+      </nav>
+
+      <ul id="agendamentosProfissional" class="space-y-2"></ul>
+
+      <div id="historicoProfissional" class="hidden space-y-4">
+        <div>
+          <h4 class="font-semibold text-purple-600">Atendimentos Realizados</h4>
+          <ul id="historicoConcluido" class="space-y-2"></ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-red-600">Agendamentos Cancelados</h4>
+          <ul id="historicoCancelado" class="space-y-2"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const sections = document.querySelectorAll("main section");
+
+  // Função para mostrar a seção selecionada e esconder as outras
+  function showSection(id) {
+    sections.forEach(sec => sec.classList.add("hidden"));
+    document.getElementById(id).classList.remove("hidden");
+  }
+
+  // Evento para o logo voltar para a seção inicial
+  document.getElementById('logo').addEventListener('click', () => {
+    showSection('inicio');
+  });
+
+  // Mostra a subseção dentro da área do profissional (agendamentos ou histórico)
+  function mostrarSubsecao(id) {
+    document.getElementById("agendamentosProfissional").classList.add("hidden");
+    document.getElementById("historicoProfissional").classList.add("hidden");
+    document.getElementById(id).classList.remove("hidden");
+  }
+
+  // Mostrar ou esconder o campo de endereço conforme o local escolhido
+  function toggleEndereco(select) {
+    const enderecoInput = document.getElementById("enderecoInput");
+    if (select.value === "domicilio") {
+      enderecoInput.classList.remove("hidden");
+      enderecoInput.required = true;
+    } else {
+      enderecoInput.classList.add("hidden");
+      enderecoInput.required = false;
+    }
+  }
+
+  // Enviar agendamento e salvar no localStorage
+  document.getElementById("formAgendamento").onsubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    const data = Object.fromEntries(new FormData(form));
+    const profissional = data.profissional;
+    const key = `agendamentos_${profissional}`;
+    const agendamentos = JSON.parse(localStorage.getItem(key)) || [];
+    agendamentos.push(data);
+    localStorage.setItem(key, JSON.stringify(agendamentos));
+    alert("Agendamento realizado!");
+    form.reset();
+    document.getElementById("enderecoInput").classList.add("hidden");
+  };
+
+  // Função para mostrar o painel profissional e carregar dados
+  function mostrarPainelProfissional(user) {
+    document.getElementById("painelProfissional").classList.remove("hidden");
+    mostrarSubsecao('agendamentosProfissional');
+
+    // Limpar formulário login (sem dados preenchidos)
+    const formLogin = document.getElementById("loginForm");
+    formLogin.reset();
+
+    const key = `agendamentos_${user}`;
+    const dados = JSON.parse(localStorage.getItem(key)) || [];
+    const ul = document.getElementById("agendamentosProfissional");
+    ul.innerHTML = "";
+    dados.forEach((ag, i) => {
+      const li = document.createElement("li");
+      li.className = "bg-white p-3 border rounded shadow-sm";
+      li.innerHTML = `
+        <p><strong>Cliente:</strong> ${ag.cliente}</p>
+        <p><strong>Serviço:</strong> ${ag.servico}</p>
+        <p><strong>Data:</strong> ${ag.data.split("-").reverse().join("/")}</p>
+        <p><strong>Hora:</strong> ${ag.hora}</p>
+        <p><strong>Telefone:</strong> ${ag.telefone}</p>
+        <p><strong>Local:</strong> ${ag.local === "studio" ? "Estúdio" : "Domicílio"}</p>
+        ${ag.local === "domicilio" && ag.endereco ? `<p><strong>Endereço:</strong> ${ag.endereco}</p>` : ""}
+        <div class="mt-2 space-x-2">
+          <button onclick="atender('${key}',${i})" class="bg-purple-600 text-white px-2 py-1 rounded">Atendimento Realizado</button>
+          <button onclick="cancelar('${key}',${i})" class="bg-red-600 text-white px-2 py-1 rounded">Cancelar</button>
+        </div>`;
+      ul.appendChild(li);
+    });
+
+    const historicoConcluido = JSON.parse(localStorage.getItem(`historico_${key}_concluido`)) || [];
+    const ulConcluido = document.getElementById("historicoConcluido");
+    ulConcluido.innerHTML = "";
+    historicoConcluido.forEach(ag => {
+      const li = document.createElement("li");
+      li.className = "bg-purple-100 p-3 border rounded shadow-sm";
+      li.innerHTML = `
+        <p><strong>Cliente:</strong> ${ag.cliente}</p>
+        <p><strong>Serviço:</strong> ${ag.servico}</p>
+        <p><strong>Data:</strong> ${ag.data.split("-").reverse().join("/")}</p>
+        <p><strong>Hora:</strong> ${ag.hora}</p>
+        <p><strong>Telefone:</strong> ${ag.telefone}</p>
+        <p><strong>Local:</strong> ${ag.local === "studio" ? "Estúdio" : "Domicílio"}</p>
+        ${ag.local === "domicilio" && ag.endereco ? `<p><strong>Endereço:</strong> ${ag.endereco}</p>` : ""}
+      `;
+      ulConcluido.appendChild(li);
+    });
+
+    const historicoCancelado = JSON.parse(localStorage.getItem(`historico_${key}_cancelado`)) || [];
+    const ulCancelado = document.getElementById("historicoCancelado");
+    ulCancelado.innerHTML = "";
+    historicoCancelado.forEach(ag => {
+      const li = document.createElement("li");
+      li.className = "bg-red-100 p-3 border rounded shadow-sm";
+      li.innerHTML = `
+        <p><strong>Cliente:</strong> ${ag.cliente}</p>
+        <p><strong>Serviço:</strong> ${ag.servico}</p>
+        <p><strong>Data:</strong> ${ag.data.split("-").reverse().join("/")}</p>
+        <p><strong>Hora:</strong> ${ag.hora}</p>
+        <p><strong>Telefone:</strong> ${ag.telefone}</p>
+        <p><strong>Local:</strong> ${ag.local === "studio" ? "Estúdio" : "Domicílio"}</p>
+        ${ag.local === "domicilio" && ag.endereco ? `<p><strong>Endereço:</strong> ${ag.endereco}</p>` : ""}
+      `;
+      ulCancelado.appendChild(li);
+    });
+
+    showSection('login');
+
+    // Mostrar botão sair
+    document.getElementById('btnSair').classList.remove('hidden');
+  }
+
+  // Login do profissional e mostrar os agendamentos
+  document.getElementById("loginForm").onsubmit = e => {
+    e.preventDefault();
+    const user = e.target.usuario.value.trim().toLowerCase();
+    const senha = e.target.senha.value;
+    if (senha !== "1234") {
+      alert("Senha incorreta!");
+      return;
+    }
+    localStorage.setItem('profissionalLogado', user);
+    mostrarPainelProfissional(user);
+  };
+
+  // Ao carregar a página, verifica se profissional está logado e mantém sessão
+  window.addEventListener('load', () => {
+    const logado = localStorage.getItem('profissionalLogado');
+    if (logado) {
+      mostrarPainelProfissional(logado);
+    }
+  });
+
+  // Botão sair para deslogar
+  document.getElementById('btnSair').addEventListener('click', () => {
+    localStorage.removeItem('profissionalLogado');
+    document.getElementById("painelProfissional").classList.add("hidden");
+    showSection('inicio');
+    document.getElementById('loginForm').reset();
+    document.getElementById('btnSair').classList.add('hidden');
+  });
+
+  // Funções de atender e cancelar (para completar o código, pode ser igual ao que você já tinha)
+  function atender(key, index) {
+    const agendamentos = JSON.parse(localStorage.getItem(key)) || [];
+    if (index < 0 || index >= agendamentos.length) return;
+    const atendido = agendamentos.splice(index, 1)[0];
+    localStorage.setItem(key, JSON.stringify(agendamentos));
+    // Salvar no histórico concluído
+    const historicoKey = `historico_${key}_concluido`;
+    const historico = JSON.parse(localStorage.getItem(historicoKey)) || [];
+    historico.push(atendido);
+    localStorage.setItem(historicoKey, JSON.stringify(historico));
+    mostrarPainelProfissional(localStorage.getItem('profissionalLogado'));
+  }
+
+  function cancelar(key, index) {
+    const agendamentos = JSON.parse(localStorage.getItem(key)) || [];
+    if (index < 0 || index >= agendamentos.length) return;
+    const cancelado = agendamentos.splice(index, 1)[0];
+    localStorage.setItem(key, JSON.stringify(agendamentos));
+    // Salvar no histórico cancelado
+    const historicoKey = `historico_${key}_cancelado`;
+    const historico = JSON.parse(localStorage.getItem(historicoKey)) || [];
+    historico.push(cancelado);
+    localStorage.setItem(historicoKey, JSON.stringify(historico));
+    mostrarPainelProfissional(localStorage.getItem('profissionalLogado'));
+  }
+</script>
+</body>
+</html>
